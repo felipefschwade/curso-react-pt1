@@ -37,11 +37,6 @@ class FormularioLivro extends Component {
           this.setState({msgErro:erro.defaultMessage});            
         }
     });
-
-    PubSub.subscribe("limpa-erros", (topico) => {
-        this.setState({msgErro: ''})
-    })
-
 }
 
   enviaForm(evento) {
